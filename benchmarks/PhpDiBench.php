@@ -14,7 +14,7 @@ class PhpDiBench extends ContainerBenchCase
 
     private function createOptimizedBuilder()
     {
-        $cache = new ArrayCache($this->cacheDir);
+        $cache = new ArrayCache();
         $builder = new ContainerBuilder();
         $builder->setDefinitionCache($cache);
         $builder->addDefinitions(array(
